@@ -1,0 +1,12 @@
+#!name = Goodbility
+#!desc = QuanX rules converted to Loon plugin for GoodNotes/Notability
+#!author = ddgksf2013
+#!homepage = https://t.me/ddgksf2021
+
+[Script]
+http-response ^https:\/\/isi\.csan\.[a-z.]+\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://ddgksf2013.top/scripts/goodbility.vip.js,requires-body=true,tag=Goodbility_Receipts
+http-request ^https:\/\/isi\.csan\.[a-z.]+\/.+\/(receipts|subscribers) script-path=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js,tag=Goodbility_DeleteHeader
+http-response ^https?:\/\/notability\.com\/global script-path=https://ddgksf2013.top/scripts/goodbility.vip.js,requires-body=true,tag=Goodbility_Notability
+
+[Mitm]
+hostname = isi.csan.*, notability.com
